@@ -93,7 +93,7 @@ public class ProjectsApp {
         BigDecimal estimatedHours = getDecimalInput("Enter the estimated hours [" + curProject.getEstimatedHours() + "]");
         BigDecimal actualHours = getDecimalInput("Enter the actual hours [" + curProject.getActualHours() + "]");
         Integer difficulty = getIntInput("Enter the project difficulty (1-5) [" + curProject.getDifficulty() + "]");
-        String notes = getStringInput("Enter the project name [" + curProject.getNotes() + "]");
+        String notes = getStringInput("Enter the project notes [" + curProject.getNotes() + "]");
 
         Project project = new Project();
         project.setProjectId(curProject.getProjectId());

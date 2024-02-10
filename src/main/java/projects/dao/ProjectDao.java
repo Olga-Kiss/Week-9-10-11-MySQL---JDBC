@@ -95,7 +95,7 @@ public class ProjectDao extends DaoBase {
     }
 
     public List<Project> fetchAllProjects() {
-        String sql = "SELECT * FROM " + PROJECT_TABLE + " ORDER BY project_name";
+        String sql = "SELECT * FROM " + PROJECT_TABLE + " ORDER BY project_id";
 
         try (Connection conn = DbConnection.getConnection()) {
             startTransaction(conn);
@@ -174,7 +174,7 @@ public class ProjectDao extends DaoBase {
 
     public boolean modifyProjectDetails(Project project) {
         String sql = ""
-                + "UPDATE " + PROJECT_TABLE + " SET"
+                + "UPDATE " + PROJECT_TABLE + " SET "
                 + "project_name = ?, "
                 + "estimated_hours = ?, "
                 + "actual_hours = ?, "
